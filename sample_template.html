@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Walt</title>
+    <style>
+    .{prefix}-container {{
+      width: {frame_width}px;
+      height: {frame_height}px;
+      overflow: hidden;
+    }}
+
+    .{prefix}-container img {{
+      animation: {prefix}-keyframes {duration} infinite;
+      animation-timing-function: steps({frame_count}, end);
+    }}
+
+    @keyframes {prefix}-keyframes {{
+      0% {{
+        transform: translateX(0px);
+      }}
+      100% {{
+        transform: translateX(-{final_width}px);
+      }}
+    }}
+    </style>
+  </head>
+  <body>
+    <h1>Animation Example</h1>
+    <div class="{prefix}-container">
+      <img src="walt.png">
+    </div>
+  </body>
+</html>
